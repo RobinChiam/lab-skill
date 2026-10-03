@@ -19,12 +19,12 @@ Matt Pocock uses the "Zone of Proximal Development" to better understand a learn
 > In 1956, original version of the taxonomy was 6 levels of objectives;
 > Knowledge -> Comprehension -> Application -> Analysis -> Synthesis -> Evaluation 
 
-<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/BloomsTaxonomy.png/250px-BloomsTaxonomy.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="bloom-taxonomy-1956-version" width="800">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/BloomsTaxonomy.png/250px-BloomsTaxonomy.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="bloom-taxonomy-1956-version" width="500">
 
 >In 2001, it was revised with some adjustments and each level was renamed;
 >Remember -> Understand -> Apply -> Analyze -> Evaluate -> Create
 
-<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Bloom%27s_revised_taxonomy.svg/120px-Bloom%27s_revised_taxonomy.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="bloom-revised-taxonomy-2001-version.png" width="800">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Bloom%27s_revised_taxonomy.svg/120px-Bloom%27s_revised_taxonomy.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="bloom-revised-taxonomy-2001-version.png" width="500">
 
 #### Breakdown of each level 
 1. Knowledge / Remember: 

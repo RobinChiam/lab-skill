@@ -1,19 +1,22 @@
-# Introducing the /lab skill
-This skill is meant to be run alongside the [/teach](https://github.com/mattpocock/skills/blob/main/skills/productivity/teach/SKILL.md) skill from Matt Pocock 
+# Introducing the `/lab` skill
 
-## What does /teach do?
-/teach skill uses HTML to visually teach a lesson and each lesson comes with a quiz to test you ( with immediate feedback ) on how well you understand the topic that was taught.
+This skill is designed to run alongside Matt Pocock's [`/teach`](https://github.com/mattpocock/skills/blob/main/skills/productivity/teach/SKILL.md) skill.
 
-## What does /lab do?
-/lab further extends /teach by creating a lab environment in its own directory and presenting the learner with a scenario that they must apply the knowledge they learnt to solve it. It comes with a worked example that uses a similar scenario which requires the same skills as well. 
+## What does `/teach` do?
 
-This provides the learner with the option to reference the worked example should they ever get stuck while attempting to solve the first lab scenario.
+The `/teach` skill uses HTML lessons and interactive exercises, such as quizzes with immediate feedback, to help you learn and assess your understanding of a topic.
 
-/lab also instructs the AI agent that is running the /teach session to use the lab scenario progress & results as part of the indicator that /teach uses to understand the learner's comprehension and create the learning record accordingly.
+## What does `/lab` do?
 
+The `/lab` skill extends `/teach` by creating a lab environment in its own directory and presenting the learner with a scenario that requires them to apply what they have learned. It includes a worked example based on a similar scenario that requires the same skills.
 
-# What frameworks were consider?
-Matt Pocock uses the "Zone of Proximal Development" to better understand a learner's capabilities with and without guidance as well as what they are incapable of achieving. This measures the learner's comfort zone in regards to a given skill and how comfortable a learner is performing without guidance as well as identify which tasks the learner cannot complete.
+The learner can refer to the worked example if they get stuck while attempting the lab scenario.
+
+The `/lab` skill also instructs the AI agent running the `/teach` session to use the learner's lab progress and results to inform its assessment of their understanding and create the corresponding learning record.
+
+## What frameworks were considered?
+
+Matt Pocock's `/teach` skill uses the Zone of Proximal Development to guide teaching based on what a learner can do independently, what they can do with guidance, and what they cannot yet do. This helps the agent select suitable tasks and support for the learner.
 
 ## Bloom's Revised Taxonomy 2001
 > In 1956, original version of the taxonomy was 6 levels of objectives;
@@ -41,5 +44,6 @@ Matt Pocock uses the "Zone of Proximal Development" to better understand a learn
 	Making judgements about information, based on set criteria or standards.
 
 
-# What is the expected outcome? 
-The learner will have better theoretical & practical understanding on a given topic & skill that they are trying to learn and can 
+## What is the expected outcome?
+
+The goal is to help learners strengthen their theoretical and practical understanding of a topic or skill and apply what they learn independently.

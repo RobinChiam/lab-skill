@@ -58,4 +58,6 @@ notes.txt
 
 Also exercise an empty directory, run the solution twice to check stable output, and compare source names and contents before and after. Verification should assess the objective rather than require the learner to copy the worked solution. Choose simpler checks when the context calls for them; report which checks were actually performed.
 
+Create a logging-enabled check entry point using [check-logging.md](check-logging.md). Have the checker name each criterion and print its result so the history exposes which requirements were missed, such as handling spaces, excluding symbolic links, or producing empty output. Capture every invocation, including failing attempts. Mark author validation runs as `agent`; inspect learner check history when providing feedback and handing off to `/teach`.
+
 Offer an explanation prompt about why a whitespace-splitting approach could fail. At completion, accept the learner's explicit confirmation that they can handle the capability without guidance and record it with available observations. Running this pilot as an author check does not establish a learner's competence.

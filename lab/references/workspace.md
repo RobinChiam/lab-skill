@@ -12,6 +12,7 @@ labs/
     BRIEF.md
     worked-example/
     challenge/
+    logs/checks/
     REPORT.md
 learning-records/
 ```
@@ -29,6 +30,7 @@ Keep `BRIEF.md` concise, covering:
 - Available environment and assumptions.
 - Links to the worked example and challenge.
 - Expected results, how to check them, and how to reset disposable fixtures.
+- The logging-enabled check command and where to find timestamped run output.
 - Relevant sources when needed.
 
 The model chooses practical complexity and support from current teaching context. Do not infer a universal learner level from a Bloom's label.
@@ -47,7 +49,8 @@ Describe the point to resume from when unfinished.
 ## Work and verification
 Link the brief and relevant learner artifacts. State checks actually performed,
 their results, and any unavailable verification. Distinguish agent observations
-from learner reports.
+from learner reports. Link relevant check logs and summarise repeated failures,
+resolved criteria, and remaining issues; distinguish learner runs from agent runs.
 
 ## Learner confirmation and reasoning
 Record the learner's independence statement, or say it has not been provided.
@@ -67,6 +70,6 @@ Read existing teaching records before adding one. Reuse the local convention; if
 
 > The learner confirmed they can process files with spaces in their names without guidance after the file-processing lab. The observed manifest checks passed; reasoning about argument handling was discussed. See the lab report for the task and verification. `/teach` can use this when selecting the next exercise.
 
-Adapt claims to the actual session. A confirmation without inspected work should explicitly be described as learner-reported. Before appending, check whether the capability and the same lab result are already recorded; do not duplicate the record during a resumed handoff. Link the record from the report so subsequent invocations can find it.
+Adapt claims to the actual session. A confirmation without inspected work should explicitly be described as learner-reported. When useful, include significant check-history findings with links to the relevant runs, distinguishing observed failing criteria from inferred misconceptions. Before appending, check whether the capability and the same lab result are already recorded; do not duplicate the record during a resumed handoff. Link the record from the report so subsequent invocations can find it.
 
 In-progress reports preserve session state. Learning records preserve significant learning decisions; they are not an automatic activity log for every attempt.

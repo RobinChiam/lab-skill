@@ -44,6 +44,14 @@ Matt Pocock's `/teach` skill uses the Zone of Proximal Development to guide teac
 	Making judgements about information, based on set criteria or standards.
 
 
+# How does it work
+
+The user prompts their AI Agent from their CLI Harness and instructs it to use the `/teach` skill to teach them a skill, optimally they should give a brief introduction into what their current skill level is and what they are actually trying to learn.
+
+Then in the same prompt, the user invokes the `/lab` skill as well, the agent will use both skills to construct the workspace + lab environment. There will be a `lab/` directory containing the lab modules created by the AI. Briefs, missions, introductions, a worked example and a challenge scenario are provided along with a checker script that checks if you have completed the work successfully. 
+
+Each time the learner uses the checker script to verify their challenge output, it gets logged so that the agent can track what the user was struggling, missing and determine better learning records in tandem with the `/teach` skill which can help with understanding the learner's Zone of Proximal Development.
+
 ## What is the expected outcome?
 
 The goal is to help learners strengthen their theoretical and practical understanding of a topic or skill and apply what they learn independently.

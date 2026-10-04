@@ -1,6 +1,8 @@
 ---
 name: lab
 description: Create and guide practical software or technical labs with a worked example and a related learner challenge, alongside an existing teaching workspace or a supplied learning objective. Use for hands-on learning and lab feedback, rather than ordinary implementation requests or whole-course planning.
+metadata:
+  version: "0.0.2"
 ---
 
 # Lab
@@ -9,7 +11,7 @@ Help the learner apply a concept through a solved example and a related unsolved
 
 ## Establish context
 
-Use the current teaching session and its workspace. Read its `MISSION.md`, relevant `learning-records/`, `NOTES.md`, and applicable `RESOURCES.md` entries when present. Also read the relevant existing `labs/` brief and report when resuming. Resolve the teaching workspace from session context or an explicit path; ask only if multiple plausible workspaces remain. Do not treat this skill's development notes as a learner's teaching mission.
+Use the current teaching session and its workspace. Read its `MISSION.md`, relevant `learning-records/`, `NOTES.md`, and applicable `RESOURCES.md` entries when present. Also read the relevant existing `labs/` brief, report, and check-run logs when resuming. Resolve the teaching workspace from session context or an explicit path; ask only if multiple plausible workspaces remain. Do not treat this skill's development notes as a learner's teaching mission.
 
 Carry forward the target capability, established prerequisites, suitable challenge level, environment constraints, and success criteria. Starting-level assessment belongs to `/teach`; do not administer a second placement assessment. If context is incomplete, use a reasonable, stated assumption for a low-impact choice and ask only for information necessary to create a relevant lab. A supplied objective is enough to create a standalone lab; return a handoff report even if `/teach` is unavailable.
 
@@ -23,6 +25,14 @@ Read [workspace.md](references/workspace.md) when creating, resuming, or reporti
 - References, solved examples, hints, documentation, and AI help are unrestricted. Keep the worked example accessible. Separate materials for clarity, not secrecy. Provide a full solution if requested and preserve the learner's opportunity to try another task.
 - Decide the appropriate lifecycle and verification for the task. Default to small local files and code exercises in a disposable lab area. Choose fixtures, checks, rubrics, setup, and reset instructions proportional to the objective. Check the proposed exercise when feasible; state exactly what was checked and what remains unverified. If the environment is unavailable, explain the limitation and offer an appropriate alternative.
 - Use available trusted resources and the workspace's documentation lookup conventions for unfamiliar or version-dependent facts. Keep references close to the decisions they support.
+
+## Log every check run
+
+Read [check-logging.md](references/check-logging.md) when creating or updating a check script. Every learner-facing check command must record its own run automatically, including runs outside the chat. Use the bundled runner or equivalent instrumentation to save UTC timestamps, complete stdout and stderr output, and the check's exit code under the lab's `logs/checks/`. Keep one separate record per invocation, including failed and silent runs. Preserve the history during retries and fixture resets.
+
+Provide one documented check entry point that routes all supported verification commands through logging. Mark agent-authored validation runs as `agent` so they are distinguishable from learner attempts. When updating an existing lab, retain its checks and learner files, adding logging to its public check entry points. Do not fabricate historical logs for earlier runs; describe a gap if earlier output is unavailable.
+
+Before feedback or handoff, inspect the check history alongside the learner's work. Identify repeated failing criteria, changes between attempts, and issues that were resolved. Separate script or environment failures from evidence about the target capability. Logs show observed results, not the learner's reasoning, assistance, or a precise ZPD measurement; establish those from the teaching conversation when available.
 
 For a first lab without a more relevant objective, consider the optional [file-processing pilot](references/first-pilot.md). It is a starting example, not a prerequisite or fixed curriculum. Choose another pilot when the mission calls for it.
 
@@ -38,8 +48,8 @@ Trust the learner's restraint and account of their work. Do not introduce procto
 
 ## Report and resume
 
-Write a concise `REPORT.md` containing the exercise, submission or artifact links, verification results, learner confirmation, observed reasoning, remaining misconceptions, and a suggested next activity. Distinguish learner-reported capability from checks actually performed. Report only what is available; mark unobserved reasoning or unknown details as such.
+Write a concise `REPORT.md` containing the exercise, submission or artifact links, verification results, learner confirmation, observed reasoning, remaining misconceptions, and a suggested next activity. Link relevant check-run logs and summarise the failure-to-success history, unresolved criteria, and useful support observed. Distinguish learner-reported capability from checks actually performed. Report only what is available; mark unobserved reasoning or unknown details as such.
 
-Use `/teach`'s learning decision records as the durable progress store. Follow the existing format and numbering. After an explicit independence confirmation, append a concise learning record identifying the capability, the learner's confirmation, relevant observed results, and the lab report. Also record a significant established misconception if useful to future teaching. Do not create a competing progress ledger, rewrite the path, or declare that the learner passed an unseen `/teach` assessment.
+Use `/teach`'s learning decision records as the durable progress store. Follow the existing format and numbering. After an explicit independence confirmation, append a concise learning record identifying the capability, the learner's confirmation, relevant observed results, and the lab report. Also record a significant established misconception if useful to future teaching. Use significant patterns in the check history to inform these records and recommendations for ZPD-appropriate support; retain raw runs in the lab rather than creating a learning record for every failure. Do not create a competing progress ledger, rewrite the path, or declare that the learner passed an unseen `/teach` assessment.
 
 Keep an in-progress report when the learner pauses so the next invocation can read the current teaching context and lab files together. At handoff, tell the model to consult the report alongside `/teach`'s learning records. `/teach` makes advancement and review decisions. A file-based handoff does not automatically modify or invoke another skill; make the report location explicit in the conversation.
